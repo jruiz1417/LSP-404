@@ -1,24 +1,23 @@
 package org.howard.edu.hw2;
 
+
 //Jose Ruiz
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
+
 
 public class JavaFileChecker {
 	public static void main(String[] args) {
 		//Added an interactive function of terminal asking for the text file "Word.txt".
-		Scanner scan = new Scanner(System.in);
-        System.out.print("Enter the name of the text file: ");
-        String fileName = scan.nextLine();
+		
 		// Created a map to store the word count
 	    Map<String, Integer> wordCount = new HashMap<>();
 
 	    // it reads the text file using BufferedReader
-	    try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+	    try (BufferedReader br = new BufferedReader(new FileReader("Word.txt"))) {
 	    	String text;
 	    	while ((text = br.readLine()) != null) {
 	    		// Splits the line into words using a regular expression
@@ -44,4 +43,3 @@ public class JavaFileChecker {
 	        }
 	    }
 	}
-
