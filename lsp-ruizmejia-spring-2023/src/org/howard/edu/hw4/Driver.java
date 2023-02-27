@@ -1,5 +1,7 @@
 package org.howard.edu.hw4;
+//Jose Ruiz
 
+//Imported IntegerSetException
 import org.howard.edu.hw4.IntegerSet.IntegerSetException;
 
 public class Driver {

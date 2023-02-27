@@ -1,5 +1,8 @@
 package org.howard.edu.hw4;
 
+//Jose Ruiz
+
+//Needed imports
 import java.util.ArrayList;
 import java.util.List;
 import java.lang.Exception;
