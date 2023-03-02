@@ -1,7 +1,9 @@
 package org.howard.edu.hw2;
 
+/**
+ * @author joseruiz
+ */
 
-//Jose Ruiz
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
