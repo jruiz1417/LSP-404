@@ -14,7 +14,7 @@ public class SongsDatabaseTest {
     private SongsDatabase db;
 
     @BeforeEach
-    //This adds the songs into database for testing
+    //This adds the songs into database for testing.
     public void setUp() {
         db = new SongsDatabase();
         db.addSong("Rap", "Savage");
@@ -23,6 +23,7 @@ public class SongsDatabaseTest {
     }
 
     @Test
+    // adds a new song and tests if the song is added to the database.
     public void testAddSong() {
         db.addSong("Salsa", "Azuca");
         Set<String> songs = db.getSongs("Salsa");
@@ -31,6 +32,8 @@ public class SongsDatabaseTest {
     }
 
     @Test
+    //gets songs from database based on genre.
+    // Tests song title.
     public void testGetSongs() {
         Set<String> rapSongs = db.getSongs("Rap");
         Set<String> jazzSongs = db.getSongs("Jazz");
@@ -42,6 +45,8 @@ public class SongsDatabaseTest {
     }
 
     @Test
+    // Gets songs from databse based on Title.
+    //Test if genre matches.
     public void testGetGenreOfSong() {
         String genre1 = db.getGenreOfSong("Savage");
         String genre2 = db.getGenreOfSong("Always There");

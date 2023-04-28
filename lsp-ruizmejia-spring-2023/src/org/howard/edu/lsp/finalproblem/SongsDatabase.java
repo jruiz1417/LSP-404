@@ -6,10 +6,11 @@ import java.util.Map;
 import java.util.Set;
 
 public class SongsDatabase {
-    // Key is the genre, HashSet contains associated songs 
+    // Key is the genre
+	// HashSet contains associated songs 
     private Map<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
     
-    // Add a song title to a genre 
+    // Adds a song title to a genre 
     public void addSong(String genre, String songTitle) {
         if (!map.containsKey(genre)) {
             map.put(genre, new HashSet<String>());
@@ -17,7 +18,7 @@ public class SongsDatabase {
         map.get(genre).add(songTitle);
     }
     
-    // Return the Set that contains all songs for a genre 
+     //Returns all songs for a genre in a Set
     public Set<String> getSongs(String genre) {
         if (map.containsKey(genre)) {
             return map.get(genre);
@@ -26,7 +27,7 @@ public class SongsDatabase {
         }
     }
     
-    // Return genre, i.e., jazz, given a song title 
+    // Returns a genre of the given songs title
     public String getGenreOfSong(String songTitle) {
         for (Map.Entry<String, HashSet<String>> entry : map.entrySet()) {
             String genre = entry.getKey();
